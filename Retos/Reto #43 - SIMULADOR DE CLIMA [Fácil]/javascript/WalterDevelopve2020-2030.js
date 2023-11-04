@@ -13,3 +13,22 @@
  *   y si llueve durante todos esos días.
  * - También mostrará la temperatura máxima y mínima de ese periodo y cuántos días va a llover.
  */
+function matrixWeather(num_dias) {
+  let temp = prompt("temperatura inicial");
+  let percentRain = prompt("Probabilidad de lluvia");
+  const dias = 0;
+  const temp_max = 0, temp_min = 0;
+  
+  for (let i = 0; i <= num_dias.length; i++) {
+    dias += num_dias[i];
+    temp += 2;
+    if (temp > 25) {
+      percentRain += 0.2 * 100;
+    } else if (temp < 5) {
+      percentRain -= 0.2 * 100;
+    } else if (percentRain === 100) {
+      temp += 1;
+    }
+  }
+  
+}
